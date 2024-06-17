@@ -7,7 +7,7 @@ export const getMe = (token) => {
     },
   });
 };
-
+//exporting to
 export const createUser = (userData) => {
   return fetch('/api/users', {
     method: 'POST',
@@ -17,7 +17,7 @@ export const createUser = (userData) => {
     body: JSON.stringify(userData),
   });
 };
-
+//exporting to LoginForm.jsx file inside components folder
 export const loginUser = (userData) => {
   return fetch('/api/users/login', {
     method: 'POST',

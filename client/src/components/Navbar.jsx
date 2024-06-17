@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-import SignUpForm from './SignupForm';
-import LoginForm from './LoginForm';
+import { useState } from 'react'; //useState from React
+import { Link } from 'react-router-dom';//importing link from react-router-dom
+import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap'; //importing Navbar, nav, container, modal, and tab elements from React-boostrap
+import SignUpForm from './SignupForm';//importing SignupForm.jsx function from the components folder
+import LoginForm from './LoginForm';//importing LoginForm.jsx function from the components folder
 
-import Auth from '../utils/auth';
-
+import Auth from '../utils/auth'; //importing Auth function from the Auth file located on the utils folder from src folder(Authentication)
+//function for
 const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
-
+  //return navigation bar(menu)
   return (
     <>
       <Navbar bg='dark' variant='dark' expand='lg'>

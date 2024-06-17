@@ -2,6 +2,7 @@
 import decode from 'jwt-decode';
 
 // create a new class to instantiate for a user
+
 class AuthService {
   // get user data
   getProfile() {
@@ -45,5 +46,5 @@ class AuthService {
     window.location.assign('/');
   }
 }
-
+//export this class to LoginForm.jsx
 export default new AuthService();
