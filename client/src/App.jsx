@@ -2,7 +2,6 @@
 import{ApolloClient,
       InMemoryCache,
       ApolloProvider,
-      gql,
       createHttpLink}from '@apollo/client';
 //importing app.css for
 import './App.css';
