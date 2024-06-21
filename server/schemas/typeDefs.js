@@ -8,6 +8,14 @@ const typeDefs =`
         saveBook( bookId:ID!,authors:String!,description:String!,title:String!,image:String!,link:String!):User
         removeBook(bookId:ID!):User
     }
+    input BookInput{
+        authors: [String]
+        description: String
+        title: String
+        bookId: ID
+        image: String
+        link: String
+    }
     type User{
         _id: ID
         username: String
