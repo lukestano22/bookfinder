@@ -5,7 +5,7 @@ import{ApolloClient,
       createHttpLink}from '@apollo/client';
 //importing app.css for
 import './App.css';
-//importing outlet from react-router
+//importing outlet from react-router, it is a component to server as a placeholder for child routes inside a parent route
 import { Outlet } from 'react-router-dom';
 //importing Navigation bar from components folder, client side
 import Navbar from './components/Navbar';
@@ -19,7 +19,7 @@ const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   // return the headers to the context so httpLink can read them
   return {
-    headers: {
+    headers: { // headers are used for
       ...headers,
       authorization: token ? `Bearer ${token}` : '',
     },
@@ -30,7 +30,7 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
-
+//setting apollo provider for
 function App() {
   return (
     <ApolloProvider client={client}>

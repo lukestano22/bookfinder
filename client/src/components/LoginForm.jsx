@@ -2,7 +2,7 @@
 import { useState } from 'react';//importing useState from react; hooks which allow us to add a variable
 import { Form, Button, Alert } from 'react-bootstrap';//form, button, and alert imported from react-bootstrap library
 
-import { loginUser } from '../utils/API';// importing loginUser function from API.js from utils folder located inside of src folder on the client folder(User)
+import { LOGIN_USER } from '../utils/mutations';// importing loginUser function from API.js from utils folder located inside of src folder on the client folder(User)
 import Auth from '../utils/auth'; //importing Auth function from auth.js from utils folder located inside of the src folder on the client folder(Authentication)
 //function to create login form on the Modal
 const LoginForm = () => {
@@ -29,7 +29,7 @@ const LoginForm = () => {
     }
 
     try {
-      const response = await loginUser(userFormData); //
+      const response = await LOGIN_USER(userFormData); //
 
       if (!response.ok) { //if something unexpectedly happens, throw error
         throw new Error('something went wrong!');
