@@ -23,11 +23,17 @@ where I can be able to look for any books around the web;
     N/A
 # Usage
 
+ This application is deployed on render, and it is only visible having access to internet and using a web browser,
+ people can create their own accounts and being able to search for any book across the internet and saved it on their accounts
+ for free
+
 # Collaboration
     N/A
 # Screenshot
 
 # Deployment
+
+render:
 
 # Repository
 
