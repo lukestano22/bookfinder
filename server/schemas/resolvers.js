@@ -18,15 +18,15 @@ const resolvers = {
             return {newUser, token}
         },
         login:async()=>{
-            let userlogin = await User.findOne({email});
+            let userEmail = await User.findOne({email});
             let userPwd = await User.isCorrectPassword({password});
-        if(userlogin !== true){
-            throw AuthenticationError;
+        if(userEmail !== true){
+            throw AuthenticationError('either email or password are incorrect, please try again');
         }
         if(userPwd !== true){
-            throw AuthenticationError;
+            throw AuthenticationError('either email or password are incorrect, please try again');
         }
-        const token = signToken(userEmail);
+        const token = signToken(user);
         return{userEmail, token};
         },
         saveBook:async(parent,{BookAdded},context)=>{
