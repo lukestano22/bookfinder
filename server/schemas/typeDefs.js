@@ -8,7 +8,7 @@ const typeDefs =`
         saveBook( bookId:ID!,authors:String!,description:String!,title:String!,image:String!,link:String!):User
         removeBook(bookId:ID!):User
     }
-    input BookInput{
+    input bookinput{
         authors: [String]
         description: String
         title: String
